@@ -12,6 +12,20 @@ public class Library {
     }
 
     public String printBooksContaining(String partialBookTitle) {
+        boolean hasTheStringBeenFound = false;
+        for(int i =0; i< books.length; i++ ){
+            if(books[i].contains(partialBookTitle)){
+                System.out.println(books[i]);
+                hasTheStringBeenFound = true;
+            }
+
+        }
+        if(hasTheStringBeenFound==false){
+            System.out.println("We're sorry, that partial book title is not in this library.");
+        }
+
+
+
         return null;
     }
 }
