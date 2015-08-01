@@ -1,24 +1,26 @@
 package com.thoughtworks.tw101.exercises.exercise9;
 
 import java.util.List;
+import java.util.ArrayList;
 
 public class Node {
     private String name;
-    private boolean isRoot;
-    private String leftChild;
-    private String rightChild;
-    private String root;
-    public Node(String name, boolean isRoot) {
-        this.name = name; this.isRoot = isRoot;
-        if(this.isRoot) {
-            leftChild = null;
-            rightChild = null;
-            root = name;
-        }
-    }
+    ;
+    private String leftChild = null;
+    private String rightChild = null;
+
+
+
 
     public void add(String nameOfNewNode) {
-        Node toAdd = new Node(nameOfNewNode, false);
+
+        if(nameOfNewNode.compareTo(this.name) ==-1){
+            if(this.leftChild==null){this.leftChild = nameOfNewNode;
+            return}
+         else{leftChild.add(nameOfNewNode);}}
+        if(nameOfNewNode.compareTo(this.name)==1){
+            if(this.rightChild==null){this.rightChild=nameOfNewNode;
+        }
 
 
     }
