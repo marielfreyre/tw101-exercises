@@ -32,12 +32,13 @@ public class Node {
         }
     }
     public List<String> names() {
-            List<String> alphabeticalList = new ArrayList<>();
-
+        List<String> alphabeticalList = new ArrayList<>();
         if(name !=null) {
-            if(leftChild != null){alphabeticalList.addAll(leftChild.names());}
+            if(leftChild != null){
+                alphabeticalList.addAll(leftChild.names());}
             alphabeticalList.add(name);
-            if(rightChild != null){alphabeticalList.addAll(rightChild.names());}
+            if(rightChild != null){
+                alphabeticalList.addAll(rightChild.names());}
         }
 
 
